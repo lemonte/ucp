@@ -90,7 +90,7 @@ def on_post_build(config):
                 file_id = data.get("$id")
                 prefix = "https://ucp.dev"
                 if file_id and file_id.startswith(prefix):
-                    file_rel_path = file_id[len(prefix) :].lstrip("/")
+                    file_rel_path = file_id[len(prefix):].lstrip("/")
                 else:
                     file_rel_path = rel_path.replace("_resp.json", ".json")
 
